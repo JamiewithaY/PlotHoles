@@ -31,7 +31,7 @@ function scoreboard(){
       });
         }else if(correct<incorrect){
 //loss call
-      var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=incorrect";
+      var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=disappointed";
       // Perfoming an AJAX GET request to our queryURL
       $.ajax({
         url: queryURL,

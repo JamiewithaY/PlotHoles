@@ -1,8 +1,37 @@
 $(document).ready(function(){
 
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBgcyAaT8sJKRU6JU973tiiIEBw3FIf5yc",
+    authDomain: "plotholes-98dd3.firebaseapp.com",
+    databaseURL: "https://plotholes-98dd3.firebaseio.com",
+    projectId: "plotholes-98dd3",
+    storageBucket: "plotholes-98dd3.appspot.com",
+    messagingSenderId: "63027588195"
+  };
+  firebase.initializeApp(config);
+
+    //creating a variable to reference the database
+    var database = firebase.database();
+
+        
+    //set html to the values from the database
+    database.ref().on('value', function(snap){
+      console.log(snap.val());
+    });
+
+    //this is triggered for each item in the database on load
+    database.ref().on('child_added', function(snap){
+      (snap.val().correct, snap.val().incorrect, snap.val().clicking)
+    });
+
+
+
+
  //scoreboard variables
-    correct= 0;
-    incorrect =0;
+    var correct= 0;
+    var incorrect =0;
 
 
     
@@ -375,6 +404,13 @@ $(".nosepick").on("click", function(){
     scoreboard();
   }
 
+
+   //pushing the form data up to firebase
+        database.ref().push({
+          "Correct": correct,
+          "Incorrect" : incorrect,
+          "ScoreBoard Clicks" : clicking
+        })
 
 
 

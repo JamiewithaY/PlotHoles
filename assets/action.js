@@ -10,7 +10,7 @@ $(document).ready(function(){
 function scoreboard(){
 //win call
     if(correct>incorrect){
-    var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=applause";
+    var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=applause";
       // Perfoming an AJAX GET request to our queryURL
       $.ajax({
         url: queryURL,
@@ -31,7 +31,7 @@ function scoreboard(){
       });
         }else if(correct<incorrect){
 //loss call
-      var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=disappointed";
+      var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=disappointed";
       // Perfoming an AJAX GET request to our queryURL
       $.ajax({
         url: queryURL,
@@ -68,7 +68,7 @@ var movie1= ["Batman", "Superman", "Iron Man", "Ant-Man"];
 
 for(i=0; i<movie1.length; i++){
 
-var queryURL = "http://www.omdbapi.com/?t=" + movie1[i] + "&y=&plot=short&apikey=4175f271";
+var queryURL = "https://www.omdbapi.com/?t=" + movie1[i] + "&y=&plot=short&apikey=4175f271";
 
 
 $.ajax({
@@ -131,7 +131,7 @@ var movie1 = ["Batteries Not Included", "Back To The Future", "ET", "Runaway"];
 
 for(i=0; i<movie1.length; i++){
 
-var queryURL = "http://www.omdbapi.com/?t=" + movie1[i] + "&y=&plot=short&apikey=4175f271";
+var queryURL = "https://www.omdbapi.com/?t=" + movie1[i] + "&y=&plot=short&apikey=4175f271";
 
 
 $.ajax({
@@ -193,7 +193,7 @@ var movie1 = ["Pretty In Pink", "Sixteen Candles", "French Kiss", "Never Been Ki
 
 for(i=0; i<movie1.length; i++){
 
-var queryURL = "http://www.omdbapi.com/?t=" + movie1[i] + "&y=&plot=short&apikey=4175f271";
+var queryURL = "https://www.omdbapi.com/?t=" + movie1[i] + "&y=&plot=short&apikey=4175f271";
 
 
 $.ajax({
@@ -254,7 +254,7 @@ var movie1= ["My Girl", "Orange County", "Mad Max", "Top Gun"];
 
 for(i=0; i<movie1.length; i++){
 
-var queryURL = "http://www.omdbapi.com/?t=" + movie1[i] + "&y=&plot=short&apikey=4175f271";
+var queryURL = "https://www.omdbapi.com/?t=" + movie1[i] + "&y=&plot=short&apikey=4175f271";
 
 
 $.ajax({
@@ -319,7 +319,7 @@ var movie1= ["Gremlins", "Predator", "Stand By Me", "Aliens"];
 
 for(i=0; i<movie1.length; i++){
 
-var queryURL = "http://www.omdbapi.com/?t=" + movie1[i] + "&y=&plot=short&apikey=4175f271";
+var queryURL = "https://www.omdbapi.com/?t=" + movie1[i] + "&y=&plot=short&apikey=4175f271";
 
 
 $.ajax({

@@ -31,11 +31,18 @@ body {
 .header {
 	background-color: rgba(0, 0, 0, 0.8);
 	height: 200px;
+	/* filter: blur(10px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='svgMask'><feGaussianBlur stdDeviation='10' /></filter></svg>#svgMask"); */
 	/* padding-top: 20px; */
 }
 
 .logo {
-	/* background: url( img/logo.png); */
+	background: url( img/logo.png);
+	background-repeat: no-repeat;
 	float: left;
 	width: 525px;
 	height: 200px;
@@ -60,6 +67,7 @@ body {
 	max-width: 1250px;
 	margin: auto;
 	background-color: rgba(255, 255, 255, 0.8);
+	font-size: 1.2em;
 }
 
 .score-giphy {
@@ -79,6 +87,15 @@ body {
 	padding: 20px;
 	background-color: rgba(255, 255, 255, 0.8);
 }
+
+#scoreboard {
+	font-size: 1.8em;
+}
+
+#plot, #wins, #loss {
+	font-size: 1.2em;
+}
+
 
 /* button {
 	margin: 0px;
@@ -120,19 +137,23 @@ ul li {
 li a {
 	display: block;
 	float: left;
-    color: white;
+    color: rgba(208, 0, 95, 1.0);
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
+	text-decoration: none;
+	font-size: 1.2em;
 }
 
 li a:hover:not(.active) {
-    background-color: #111;
+	background-color: #111;
+	text-decoration: none;
+	font-size: 1.2em;
+	color: rgba(0, 95, 255, 1.0);
 }
 
-.active {
+/* .active {
     background-color: #4CAF50;
-}
+} */
 
 
 
@@ -166,4 +187,22 @@ li a:hover:not(.active) {
 		margin: auto;
         background-color: rgba(0, 0, 0, 0.8);
     }
+}
+
+@media screen and (max-width: 525px) {
+    .logo {
+		/* background: url( img/logo-small.png); */
+		background-size: 300px 114px;
+		float: left;
+		background-repeat: no-repeat;
+		/* width: 300px; */
+		height: 114px;
+	}
+	.header {
+		background-color: rgba(0, 0, 0, 0.8);
+		height: 114px;
+	}
+	.instructions {
+		display: none;
+	}
 }
